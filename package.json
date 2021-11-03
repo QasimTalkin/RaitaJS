@@ -5,13 +5,17 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "~3",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-stream": "^5.2.1",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@webpack-cli/serve": "^1.6.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "~3"
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@rails/webpacker": "4.2.2",
+    "rails-erb-loader": "^5.5.2"
   }
 }

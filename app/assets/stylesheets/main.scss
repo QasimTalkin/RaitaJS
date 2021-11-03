@@ -7,9 +7,65 @@
 
 
 
+//Declaring variables Theme Colors 
+  $primary : #6c83e7;
+  $secondary: #40b64a; 
+  $error : #ee5151;
+  $info :  #e2c35f;
+
+// spacing 
+$base-padding: 0.74rem;
+$base-margin: 0.75rem;
+
+//borders 
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+h1 {
+  color: $primary;
+  margin-bottom: $base-margin;
+}
+
+
+a {
+  color: $primary;
+}
+
+
+button {
+  color: white;
+  border: 0;
+  background-color:cadetblue;
+  border-radius: $base-border-radius;
+  padding: $base-padding;
+}
+
+.error {
+  color: $error;
+  border-color: $error;
+  border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width:$base-border-thickness;
+}
+
+.notification {
+  color: $secondary;
+  border-color:$secondary;
+  border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width:$base-border-thickness;
+}
+
+
+
 
   body {
     font-family: Poppins;
+    background-color:  rgb(238, 208, 204);;
   }
   
   ul {
@@ -30,8 +86,3 @@
     max-width: 100%;
   }
   
-  h1 {
-    a {
-      color: red;
-    }
-  }
