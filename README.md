@@ -48,3 +48,24 @@ we import it in main
 
 @import 'var';
 ```
+
+## Nesting Rule
+```js
+//css 
+.card .card-title {
+
+}
+
+//scss
+.card {
+  .card-title {
+    
+  }
+}
+```
+
+## Math in Scss
+
+- can use it for variation 
+- can use * to multiply 
+  `$somsixe*0.75, $somsize*2`

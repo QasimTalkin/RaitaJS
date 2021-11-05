@@ -1,0 +1,66 @@
+
+h1 {
+  color: $primary;
+  margin-bottom: $base-margin;
+}
+
+
+a {
+  color: $primary;
+}
+
+
+button {
+  color: white;
+  border: 0;
+  background-color:cadetblue;
+  border-radius: $base-border-radius;
+  padding: $base-padding;
+}
+
+.error {
+  color: $error;
+  border-color: $error;
+  border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width:$base-border-thickness;
+}
+
+.notification {
+  color: $secondary;
+  border-color:$secondary;
+  border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width:$base-border-thickness;
+}
+
+
+
+
+  body {
+    font-family: Poppins;
+    background-color:  rgb(238, 208, 204);;
+  }
+  
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px dotted #efefef;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
