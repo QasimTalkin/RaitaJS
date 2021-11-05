@@ -38,3 +38,13 @@ $base-margin: 0.75rem;
 
 ## Partials 
 
+- split code into multiple files 
+- file for vars, 
+- file for button , color and so on 
+```
+var.scss // having all the vars 
+
+we import it in main 
+
+@import 'var';
+```
