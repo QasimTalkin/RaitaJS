@@ -6,10 +6,12 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "browser-sync": "^2.27.7",
+    "sass": "^1.43.4",
+    "scss": "^0.2.4",
     "turbolinks": "^5.2.0",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.10.3",
+    "webpack-cli": "4.3.0",
+    "webpack-dev-server": "^4.4.0",
     "webpack-stream": "^5.2.1"
   },
   "version": "0.1.0",
@@ -17,6 +19,7 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@rails/webpacker": "4.2.2",
+    "@webpack-cli/serve": "^1.6.0",
     "rails-erb-loader": "^5.5.2"
   }
 }

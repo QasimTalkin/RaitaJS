@@ -1,9 +1,14 @@
+
+@use 'scss:math';
+
 .card {
     display: block;
     padding: $base-padding;
     border: $base-border-thickness solid #ddd;
     box-shadow: $base-box-shadow;
     background-color: $whiteBackground;
+    border-radius: math.div($base-border-radius, 4) ;
+    border: 1px solid;
 
 
     .card-title {
@@ -20,7 +25,5 @@
             text-decoration: underline;
         }
     }
-
-
 }
 
