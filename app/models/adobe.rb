@@ -1,0 +1,2 @@
+class Adobe < ApplicationRecord
+end
