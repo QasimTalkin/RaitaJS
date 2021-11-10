@@ -27,6 +27,6 @@ class AdobeController < ApplicationController
     def set_headers(clientId)
         response.headers['X-AdobeSign-ClientId'] = clientId
         response.headers['status'] = 200
-      end
+    end
 end
 
