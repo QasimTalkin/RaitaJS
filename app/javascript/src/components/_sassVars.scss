@@ -5,6 +5,36 @@ $error : #ee5151;
 $info :  #e2c35f;
 $whiteBackground:  #f3eede;
 
+
+
+// color pallet 
+$colors : (
+    'primary':$primary,
+    'secondary':$secondary,
+    'info': $info,
+    'whiteBackground':$whiteBackground,
+    'error' : $error,
+    "navy" : #001F3F,
+    "blue" : #0074D9,
+    "aqua" : #7FDBFF,
+    "teal" : #39CCCC,
+    "olive" : #3D9970,
+    "green" : #2ECC40,
+    "lime" : #01FF70,
+    "yellow" : #FFDC00,
+    "orange" : #FF851B,
+    "red" : #FF4136,
+    "fuchsia" : #F012BE,
+    "purple" : #B10DC9,
+    "maroon" : #85144B,
+    "white" : #FFFFFF,
+    "silver" : #DDDDDD,
+    "gray" : #AAAAAA,
+    "black" : #111111
+);
+
+
+
 // spacing 
 $base-padding: 0.74rem;
 $base-margin: 0.75rem;

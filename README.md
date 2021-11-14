@@ -71,3 +71,57 @@ we import it in main
   `$somsixe*0.75, $somsize*2`
 - division : use the math package 
 - ***math package*** `@use 'sass:math'`
+`border-radius: math.div($base-border-radius, 2);`
+- debug sass files
+  - we use 
+
+```scss
+@debug 'hello';
+@debug math.div(4,3);
+@debug math.floor(2.5);
+```
+
+## maps in scss
+- collect  a lot of diff vars and and values as hash of key values 
+```scss
+  @debug map-get($colors, 'error' );
+ @debug map-has-key($colors , 'ss' );
+ @debug map-remove($colors, 'black');
+@debug map-merge($colors, $colors);
+```
+
+## Loops 
+- @each 
+- running an each loop on collection of colors
+```scsss
+@each $key, $val in $colors {
+    .text-#{$key}{
+        color:$val
+    }
+
+    .bg-#{$key}{
+        background-color: $val;
+    }
+}
+}
+```
+- @for 
+
+## Conditional
+- @if 
+- @else 
+## parent selectors 
+- `&:`
+
+## Mixins (group together bunch of css properties and values )
+- group of elevemts with same properties 
+- we create mixin for these
+- create `@mixin btn($bg-color: #e2e2e2) {  background-color:$bg-color}` decalred with default value 
+- use `@include btn($some-value)` or `@include btn;` uses default
+
+## Functions in SASS
+- manipulation 
+- similar to lighten, darken, mix..
+```scss
+
+```
