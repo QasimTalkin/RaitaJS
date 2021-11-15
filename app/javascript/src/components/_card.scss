@@ -2,11 +2,10 @@
 
 .card {
     display: block;
-    width: 50vw;
     padding: $base-padding;
     border: $base-border-thickness solid #ddd;
+    background-color: palegoldenrod;
     box-shadow: $base-box-shadow;
-    background-color: $whiteBackground;
     border-radius: math.div($base-border-radius, 4);
 
 

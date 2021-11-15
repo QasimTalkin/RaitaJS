@@ -14,6 +14,16 @@
         background-color: darken(#000000, 30)
     }
 }
+
+
+.btn-comp {
+    @include btn(complement(#a4acaf));
+    &:hover{
+        background-color: darken(#000000, 30)
+    }
+}
+
+
 @each $key, $val in $colors {
 
     .btn-#{$key}{
@@ -23,6 +33,13 @@
     }
     }
 
+    .btn-comp-#{$key}{
+        @include btn(lighten-comp($val));
+        &:hover{
+           background-color: lighten($val, 10)
+        }
+        }
+
     .btn-outline-#{$key}{
         @include btn(mix(white, $val, 80));
         &:hover{
@@ -31,6 +48,15 @@
         }   
         border: $base-border-thickness solid $val;
         color: $val;
+    }
+    .btn-outline-comp-#{$key}{
+        @include btn(mix(white, $val, 80));
+        &:hover{
+            background-color: lighten-comp($val);
+            color: lighten-comp(lighten($val,30));
+        }   
+        border: $base-border-thickness solid $val;
+        color: lighten-comp($val);
     }
     
 

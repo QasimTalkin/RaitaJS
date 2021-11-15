@@ -121,7 +121,61 @@ we import it in main
 
 ## Functions in SASS
 - manipulation 
-- similar to lighten, darken, mix..
+- similar to lighten, darken, mix.
+- we make function that gives complement of the color passed in 
 ```scss
-
+@function lighten-comp($color){
+    $compliment : complement($color);
+    $lighten-complement: lighten($compliment, 20);
+    @return $lighten-complement
+}
 ```
+
+## utility classes 
+- m-5, pl-4, o-4 --> margins, padding left, opacity and so on. 
+
+## Grid system
+-  create break points 
+```scss
+  $breakpoints:(
+      'xs':0,
+      'sm':420px,
+      'md':720px,
+      'lg':960px,
+      'xl':1200px
+
+  );
+
+  //assing mixins 
+  @mixin xs { 
+      @media (
+          min-width:map-get($breakpoints, 'xs')
+      ){
+          @content;
+      }
+  }
+  //create grid based on 12 cols 
+  @include xs {
+      @for $i from 1 through $grid-cols{
+          .col-#{$i}-xs{
+              background-color: palegoldenrod;
+              box-sizing: border-box;
+              flex-grow: 0;
+              width: math.div($i*100%, $grid-cols);
+          }
+      }
+  }
+```
+- justify content 
+- create grid gap using child of parent 
+- `somcall > *` all children on this class
+- list in scss comma seprated 
+
+## extend in Scss
+- extend/inherit css properties 
+- `@extend .flex-layout;`
+- no args passed 
+- use '%' to extend and not compile 
+
+## using the css lib
+- use as is, when devaling var use !default incase you would like to override existing variable
