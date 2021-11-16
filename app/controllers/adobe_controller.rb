@@ -28,5 +28,6 @@ class AdobeController < ApplicationController
         response.headers['X-AdobeSign-ClientId'] = clientId
         response.headers['status'] = 200
     end
+
 end
 

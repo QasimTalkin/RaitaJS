@@ -58,3 +58,5 @@ gem "hirb", "~> 0.7.3"
 gem "awesome_print", "~> 1.9"
 
 
+
+gem "httparty", "~> 0.20.0"

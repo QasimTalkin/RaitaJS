@@ -178,4 +178,4 @@ we import it in main
 - use '%' to extend and not compile 
 
 ## using the css lib
-- use as is, when devaling var use !default incase you would like to override existing variable
+- use as is, when dealing var use !default incase you would like to override existing variable
