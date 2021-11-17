@@ -179,3 +179,8 @@ we import it in main
 
 ## using the css lib
 - use as is, when dealing var use !default incase you would like to override existing variable
+
+
+## ---------------- React APP 1 ----------------------
+- rails g model Airline name image_url slug   
+-     

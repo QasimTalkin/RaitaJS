@@ -7,4 +7,15 @@ Rails.application.routes.draw do
    post 'adobe/post_webhook', to: 'adobe#post_webhook'
    get  'adobe/status', to: 'adobe#status'
    post 'adobe/status', to: 'adobe#status'
+
+  ## react paroject 1 routes
+
+  namespace :api do 
+    namespace :v1 do
+     resources :airlines, param: :slug 
+     resources :reviews
+  end
+end
+  # all non declred routed are directed here
+  get '*path', to: 'react#index', via: :all
 end
