@@ -68,3 +68,6 @@ gem "rack-cors", "~> 1.1"
 gem "jsonapi-serializer", "~> 2.2"
 
 gem "solargraph", "~> 0.44.0"
+
+
+gem 'react-rails'
