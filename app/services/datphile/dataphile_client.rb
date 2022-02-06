@@ -13,7 +13,7 @@ module Dataphile
         end
 
         def self.fetch
-            get("api/authenticate", pem: "#{File.expand_path(__dir__)}/app/services/datphile/keys/key.pem", pem_password: "123456")
+            get("api/authenticate", pem: "#{File.expand_path(__dir__)}/app/services/datphile/keys/key.pem", pem_password: ssl_ca_file)
           end
     end 
 
