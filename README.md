@@ -1,4 +1,4 @@
-# SASS
+# SASS - Raita
 
 Build our own CSS library
 ## What is SASS?
@@ -121,66 +121,170 @@ we import it in main
 
 ## Functions in SASS
 - manipulation 
-- similar to lighten, darken, mix.
-- we make function that gives complement of the color passed in 
+- similar to lighten, darken, mix..
 ```scss
-@function lighten-comp($color){
-    $compliment : complement($color);
-    $lighten-complement: lighten($compliment, 20);
-    @return $lighten-complement
+
+```
+
+
+
+# NODE - Raita
+
+## 1)
+
+- NODE compilations ->  js -> c++ -> assemble -> machaine
+- chek version `node -v`
+- `code .`
+- `node fileNameWithoutExtension`
+
+## 2)  
+
+- function `let i = () => {}`
+- the global object, same as window object in js
+  - represents a global context in node file
+  - `__dirname` absolute parth of current folder path
+  - `__filename` path with file name
+
+## 3)
+
+- file and modules
+- `require(./filename`
+- cant usue the file unless its manylly exported
+- `module.exports = 'qasim`
+- to import multiple diffrent things
+  - export as object
+- Import destructuring
+
+## 4
+
+- built in module os
+  - `const os = require('os'); console.log(os.platform());`
+- file system and
+
+## 5)
+
+- Async code that fires a function upon completion (call aback)
+- file system
+
+  ```js
+  const fs = require('fs');
+
+  // read the file
+
+  fs.readFile('./docs/file.md', (err, data) => {
+      if (err) {
+          console.log(err);
+      }
+      console.log(data);
+  });
+  ```
+
+- right and wrong location
+- buffer use `toString()`
+
+- WRITE file
+  - write and create a file
+   `fs.writeFile('./docs/fila.md', 'data', ()=>{console.log('file was written')});`
+- make directory
+  - `fs.mkdir('./docs2', (err)=>{console.log(err.code)});`
+-deleting files
+  `fs.rmd('./docs2', (err)=>{console.log(err)})`
+  -folder
+  `fs.rmdir('./docs2', (err)=>{console.log(err)})`
+  - exists
+`console.log(fs.existsSync('./docs'))`
+`
+
+```js
+if(fs.existsSync('./docs')) {
+  fs.rmdir('./docs', ()=>{console.log('docs deleted')})
+} else {
+  fs.mkdir('./docs', ()=>{console.log('docs created')})
 }
 ```
 
-## utility classes 
-- m-5, pl-4, o-4 --> margins, padding left, opacity and so on. 
 
-## Grid system
--  create break points 
-```scss
-  $breakpoints:(
-      'xs':0,
-      'sm':420px,
-      'md':720px,
-      'lg':960px,
-      'xl':1200px
+## 6-trems
 
-  );
+- lettle bits of data at a time
+  - REad strems
+  - write Strems
 
-  //assing mixins 
-  @mixin xs { 
-      @media (
-          min-width:map-get($breakpoints, 'xs')
-      ){
-          @content;
-      }
-  }
-  //create grid based on 12 cols 
-  @include xs {
-      @for $i from 1 through $grid-cols{
-          .col-#{$i}-xs{
-              background-color: palegoldenrod;
-              box-sizing: border-box;
-              flex-grow: 0;
-              width: math.div($i*100%, $grid-cols);
-          }
-      }
-  }
+```js
+const readStream = fs.createReadStream('./docs/fila.md');
+const writeStream = fs.createWriteStream('./docs/newFila.md');
+
+readStream.on('data', (chunk)=>{
+  console.log('new Stuff')
+  console.log(chunk.toString())
+  
+  writeStream.write("\n Brah new chhunk\n \n \n \n\n\n\n\n\n\n\n")
+  
+
+  writeStream.write(chunk)
+  
+})
+
+readStream.pipe(writeStream);
+
 ```
-- justify content 
-- create grid gap using child of parent 
-- `somcall > *` all children on this class
-- list in scss comma seprated 
 
-## extend in Scss
-- extend/inherit css properties 
-- `@extend .flex-layout;`
-- no args passed 
-- use '%' to extend and not compile 
+## creat server
 
-## using the css lib
-- use as is, when dealing var use !default incase you would like to override existing variable
+- require http 
+- takes in call back to perform when is hit
+- taking in req and resp args 
+- server .liten 
+  - listens for req on port  
+
+```js
+const http = require('http');
+const server = http.createServer((req, res)=> {
+
+  console.log('Server HIT. \n')
+  console.log(req.url, req.method)
+  // Set header 
+  //res.write('cool cool ');
+  res.setHeader('Content-Type', 'text/html')
+  res.write(`<h1> ${req.url} </h1> \n <h2>  ${res.hasHeader('content-type')} </h2>`);
+  res.end();
+
+});
+
+server.listen(3001, ()=>{
+  console.log('Server Starting')
+});
+
+```
+
+## html page to browsers
+```js
+const http = require('http');
+const fs = require('fs');
+let fileData = ''
+  const server = http.createServer((req, res)=> {
+    res.setHeader('Content-Type', 'text/html')
+    if (req.url == '/'){
+      fs.readFile('./web/view/index.html', (err, data)=> {
+        res.end(data)
+       })
+    } else 
+    
+    {
+      res.end(`<h1> Bar Request: ${req.url}</h1>`)
+    }
+  });
+  server.listen(3001, ()=>{
+    console.log('Server Starting')
+  });
+```
+
+- redirect to 
+`res.setHeader('location of the web page', 'loc.html'); resp.end`
 
 
-## ---------------- React APP 1 ----------------------
-- rails g model Airline name image_url slug   
--     
+## NPM 
+  - loadash
+  - express 
+- Express (easy to routes clean code )
+- npm i
