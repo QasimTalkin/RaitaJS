@@ -42,3 +42,4 @@ yarn-debug.log*
 
 *.pem
 NodeJS/node_modules
+.env

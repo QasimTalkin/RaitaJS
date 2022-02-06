@@ -306,3 +306,58 @@ resp.sendFile('./NodeJsWeb/view/index.html', {root: __dirname});
 `resp.status(404).sendFile('./NodeJsWeb/view/404.html', {root: __dirname});`
 - Ejs 
  `<h2><a href="#"><%= title %> Media</a></h2>`
+
+ - morgan middleware 
+   - logging middle
+
+
+## MOGO DB
+
+- blog Collection -> blog document 
+- user Collection -> user document (json key value pair, with uniq ID)
+- can perform CURD
+- get DB uri from online platform 
+### mongoes
+- conenct eassily with mongo DB
+- ODM
+-  can OBJECT DOUMENT MAPPING LIBB
+-  MODEL TO represents data model 
+-  model -> staic and instance method to perfom CURD
+-  Create model scheema 
+  - sample= -> sample.js
+
+```js
+// connect 
+
+const DBURI = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.bcuol.mongodb.net/sample_training?retryWrites=true&w=majority`
+mongoose.connect(DBURI, () =>{
+
+//start app only after the connection has been established
+app.listen(3001);
+
+const mongoose = require('mongoose');
+//create 
+
+const mongoose = require('mongoose');
+
+const Schema = mongoose.Schema(); // object og mongoose schema
+
+//Schema structure
+const contactUsSchema = new Schema({
+  name: {type:String, required},
+  subject: {type:String, required},
+  body: {type:String, required},
+}, {timestamps:true})
+
+   
+//Model
+const ContactUs = mongoose.model('ContactUs', contactUsSchema); 
+
+// export the model to
+module.exports = ContactUs;
+
+
+
+
+
+```

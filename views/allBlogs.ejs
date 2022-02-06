@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+<head>   <%- include('./partials/nav.ejs')%>
+</head>
+<body>
+  <style> 
+    <%- include("./styles/index.scss") %>
+  </style>
+ <hr/>
+ <%if (blogs.length > 0) {%>
+  <% blogs.forEach( b => {%>
+    <h2> <%=b.name%></h2>
+    <h3> <%=b.snipped%></h3>
+    <p><%=b.body%></p>
+ <hr/>
+  <% })%>
+ 
+<% }%>
+  
+
+</body>
