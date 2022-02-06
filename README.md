@@ -287,3 +287,19 @@ let fileData = ''
   - express 
 - Express (easy to routes clean code )
 - npm i
+```js
+const express = require('express');
+
+const app = express();
+
+app.listen(3001);
+
+app.get('/', (req, resp) => {
+
+resp.sendFile('./NodeJsWeb/view/index.html', {root: __dirname});
+
+});
+
+```
+- Express 404 -> put at last will be defulted using `use`
+`resp.status(404).sendFile('./NodeJsWeb/view/404.html', {root: __dirname});`
