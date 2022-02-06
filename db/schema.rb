@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_223454) do
+ActiveRecord::Schema.define(version: 2021_11_16_224110) do
 
   create_table "adobes", force: :cascade do |t|
     t.string "name"
@@ -21,4 +21,23 @@ ActiveRecord::Schema.define(version: 2021_11_08_223454) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "airlines", force: :cascade do |t|
+    t.string "name"
+    t.string "image_url"
+    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "score"
+    t.integer "airline_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["airline_id"], name: "index_reviews_on_airline_id"
+  end
+
+  add_foreign_key "reviews", "airlines"
 end
