@@ -304,3 +304,5 @@ resp.sendFile('./NodeJsWeb/view/index.html', {root: __dirname});
 ```
 - Express 404 -> put at last will be defulted using `use`
 `resp.status(404).sendFile('./NodeJsWeb/view/404.html', {root: __dirname});`
+- Ejs 
+ `<h2><a href="#"><%= title %> Media</a></h2>`
