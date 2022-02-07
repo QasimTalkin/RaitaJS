@@ -11,7 +11,7 @@ const post_details = (req, res)=>{
   console.log(req.params)
   PostNew.findById(req.params.id)
     .then(post => {res.render('post', {post})})
-    .catch(err => {console.log(err);})  
+    .catch(err => {res.render('404')})  
 };
 module.exports = {
   all_post,
