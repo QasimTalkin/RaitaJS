@@ -13,6 +13,7 @@
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
+    "jest": "^27.5.0",
     "mongoose": "^6.2.0",
     "mongose": "0.0.2-security",
     "node-sass": "^6.0.1",
@@ -26,7 +27,7 @@
     "scss": "^0.2.4",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12" 
   },
   "version": "0.1.0",
   "devDependencies": {
@@ -36,5 +37,9 @@
     "rails-erb-loader": "^5.5.2",
     "webpack-dev-server": "3.11.2",
     "webpack-stream": "^5.2.1"
+  },
+  "scripts":{
+    "test":"jest"
   }
+  
 }
