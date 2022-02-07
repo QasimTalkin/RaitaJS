@@ -361,3 +361,8 @@ module.exports = ContactUs;
 post 
 delete -color.findanddeletebyid 
 
+## Tidy Routes
+- Express router 
+  - find similar rote
+
+- Controller 

@@ -1,11 +1,14 @@
 const express = require('express');
 const lorem = require('@jamen/lorem');
-
 const app = express();
-const ContactUs = require('./models/ContactUs')
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const companySchema = new Schema({}, { strict: false });
+const acceptAllSchema = new Schema({}, { strict: false });
+const postRoutes = require('./Routes/post');
+
+
+
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
@@ -22,35 +25,7 @@ app.use(express.urlencoded({extended:true}));
 //EJS 
 app.set('view engine', 'ejs');
 
-// test mongoose about-q
-app.post('/postNew', (req, res)=>{
-console.log('aaa')
-console.log(req.body);
-//middle wwahre to parse data 
-  
-  let random = Math.floor(Math.random() * 350);
-  console.log(req.url)
-  const contactUs = new ContactUs(req.body);
-  contactUs.save()
-  .then(result => {res.redirect('allpost')})
-  .catch(err => {console.log(err);})  ;
-
-})
-
-// test mongoose about-q
-app.get('/post/:id', (req, res)=>{
-  console.log(req.params)
-  ContactUs.findById(req.params.id)
-    .then(post => {res.render('post', {post})})
-    .catch(err => {console.log(err);})  
-}) 
-
-// test mongoose about-q
-app.get('/allpost', (req, res)=>{
-  ContactUs.find().sort({name:1})
-    .then(blogs => {res.render('allblogs', {blogs})})
-    .catch(err => {console.log(err);})  
-}) 
+// test mongoose about-
 //Home
 app.get('/', (req, resp) => {
 
@@ -58,9 +33,13 @@ resp.render('index', {title:'Shinobi'});
 
 });
 
+
+// Post
+app.use('/post', postRoutes);
+
 //About
 app.get('/about', (req, resp) => {
-const Companies = mongoose.model('Companies', companySchema, 'companies')
+const Companies = mongoose.model('Companies', acceptAllSchema, 'companies')
   Companies.find().limit(20)
     .then(company => {resp.render('about', {company})})
     .catch(err => {console.log(err);})  
