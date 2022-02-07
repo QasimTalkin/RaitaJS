@@ -356,8 +356,8 @@ const ContactUs = mongoose.model('ContactUs', contactUsSchema);
 // export the model to
 module.exports = ContactUs;
 
-
-
-
-
+//require and make post, find, findall, save
 ```
+post 
+delete -color.findanddeletebyid 
+

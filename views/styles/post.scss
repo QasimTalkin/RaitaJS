@@ -1,0 +1,149 @@
+html,
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  min-height: 100%;
+}
+.banner {
+  width: 100%;
+  filter: grayscale(95%);
+}
+.banner img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+.banner:hover {
+  filter: grayscale(0);
+}
+#header {
+  background-color: #fff;
+  height: 8rem;
+  border-bottom: solid 1px #ccc;
+  position: sticky;
+  top: 0;
+  margin: 0 1rem;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+h1 {
+  font-size: 4rem;
+}
+.content {
+  padding: 0 6rem;
+  font-size: 1.5rem;
+}
+#reallyQuote {
+  line-height: 1.2em;
+  font-size: 1.8rem;
+  column-span: all;
+  margin: 0px;
+  padding: 0.6rem;
+  margin-left: 5px;
+  border: 5px solid #ccc;
+}
+.effect {
+  opacity: 0.5;
+  transition: opacity 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.effect:hover {
+  opacity: 1;
+}
+.subheading::before {
+  content: "–";
+}
+.subheading::selection {
+  background: #ccc;
+}
+.simpleQuote {
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-left: 5px solid #ccc;
+}
+h1::selection,
+p::selection,
+em::selection,
+.list::selection,
+.list ol > li::selection,
+q::selection,
+cite::selection,
+b::selection {
+  background: #ccc;
+}
+#footer {
+  margin: 0 6rem;
+  font-size: 1rem;
+  border-top: solid 1px #ccc;
+}
+a {
+  text-decoration: underline #fff;
+  transition: text-decoration-color 300ms;
+  color: #000;
+  font-weight: bold;
+}
+a:hover {
+  color: #ccc;
+  text-decoration-color: #ccc;
+}
+@media (max-width: 800px) {
+  .content {
+    padding: 0 2rem;
+  }
+  #footer {
+    margin: 0 2rem;
+  }
+}
+@media (max-width: 600px) {
+  #header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  #header {
+    height: 6.5rem;
+  }
+}
+@media (max-width: 430px) {
+  #header h1 {
+    font-size: 2.5rem;
+  }
+  .content {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
+  #reallyQuote {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    border: 2px solid #ccc;
+  }
+  #footer {
+    margin: 0 1rem;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 375px) {
+  #header h1 {
+    font-size: 2rem;
+  }
+}
+a:visited {
+  text-decoration-color: #ccc;
+  color: #ccc;
+}

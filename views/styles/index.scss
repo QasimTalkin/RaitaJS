@@ -16,13 +16,11 @@ html {
 ul,
 nav {
 	list-style: none;
-	background-color: black;
+	background-color: rgb(172, 134, 134);
 }
 
 a {
-	text-decoration: none;
-	opacity: 0.75;
-	color: #fff;
+	color: rgb(83, 95, 197);
 }
 
 a:hover {
@@ -116,7 +114,7 @@ header {
 	padding: 35px 100px 0;
 	animation: 1s fadein 0.5s forwards;
 	opacity: 0;
-	color: #fff;
+	color: rgb(129, 113, 113);
 	z-index: 2;
 }
 
@@ -157,7 +155,7 @@ header nav li {
 	justify-content: center;
 	text-align: center;
 	min-height: 100vh;
-	color: #fff;
+	color: rgb(153, 123, 123);
 }
 
 .hero .background-image {

@@ -1,17 +1,23 @@
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-<head>   <%- include('./partials/nav.ejs')%>
+<head>  
 </head>
 <body>
   <style> 
-    <%- include("./styles/index.scss") %>
+    <%- include("./styles/about.scss") %>
   </style>
-
- <%if (blogs.length > 0) {%>
-  <% blogs.forEach( b => {%>
-    <h3> <%=b.title%></h3>
-    <p><%=b.review%></p>
+ <%if (company.length > 0) {%>
+  <% company.forEach( b => {%>
+      <div class="flip">
+        <div class="front">
+           <h1 class="text-shadow"><%-b.name%></h1>
+        </div>
+        <div class="back">
+           <h2><%-b.description%></h2>
+           <p><%- b.overview %></p>
+        </div>
+    </div>
   <% })%>
  
 <% }%>

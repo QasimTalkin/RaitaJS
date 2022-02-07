@@ -8,13 +8,13 @@
     <%- include("./styles/index.scss") %>
   </style>
  <hr/>
- <%if (blogs.length > 0) {%>
-  <% blogs.forEach( b => {%>
-    <h2> <%=b.name%></h2>
-    <h3> <%=b.snipped%></h3>
-    <p><%=b.body%></p>
+ <%if (blogs.length > 0)  {%>
+  <% blogs.forEach( b => { if (b["msg"] !== undefined){%>
+    <h2> <a href="/post/<%=b.id%>"><%=b.name%></a></h2>
+    <h3> <%=b.email%></h3>
+    <p><%=b.msg%></p>
  <hr/>
-  <% })%>
+  <% }})%>
  
 <% }%>
   

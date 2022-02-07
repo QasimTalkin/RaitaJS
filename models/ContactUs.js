@@ -5,8 +5,8 @@ const Schema = mongoose.Schema; // object og mongoose schema
 //Schema structure
 const contactUsSchema = new Schema({
   name: {type:String, required:true},
-  subject: {type:String, required:true},
-  body: {type:String, required:true},
+  email: {type:String, required:true},
+  msg: {type:String, required:true},
 }, {timestamps:true})
 
    
