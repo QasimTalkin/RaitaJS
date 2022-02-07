@@ -1,6 +1,9 @@
-myPeeps = ['a', 'b', 'c', 'd', 'e', 'f']
-yourPeeps = ['aaa', 'bbb', 'cccc', 'ddd', 'rrre', 'fff']
-console.log(__filename + ' from require');
+const myPeeps = ['a', 'b', 'c', 'd', 'e', 'f']
+const yourPeeps = ['aaa', 'bbb', 'cccc', 'ddd', 'rrre', 'fff']
+const sum = (a,b) => { return `The sum is ${a+b}`} 
+
+
 module.exports = {
-    myPeeps
+    myPeeps, yourPeeps, sum
 }
+
