@@ -1,0 +1,2 @@
+class RoRModel < ApplicationRecord
+end

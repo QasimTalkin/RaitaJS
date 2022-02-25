@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ro_r_models
   get 'angular/index'
   get 'react/index'
   root 'main#index'

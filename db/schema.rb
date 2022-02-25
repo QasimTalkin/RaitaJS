@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_16_224110) do
+ActiveRecord::Schema.define(version: 2022_02_25_214718) do
 
   create_table "adobes", force: :cascade do |t|
     t.string "name"
@@ -37,6 +37,16 @@ ActiveRecord::Schema.define(version: 2021_11_16_224110) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["airline_id"], name: "index_reviews_on_airline_id"
+  end
+
+  create_table "ro_r_models", force: :cascade do |t|
+    t.string "game"
+    t.string "name"
+    t.string "score"
+    t.string "add"
+    t.date "dob"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "reviews", "airlines"

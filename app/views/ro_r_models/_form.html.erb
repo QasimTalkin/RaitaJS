@@ -1,0 +1,42 @@
+<%= form_with(model: ro_r_model, local: true) do |form| %>
+  <% if ro_r_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ro_r_model.errors.count, "error") %> prohibited this ro_r_model from being saved:</h2>
+
+      <ul>
+        <% ro_r_model.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :game %>
+    <%= form.text_field :game %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.text_field :score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :add %>
+    <%= form.text_field :add %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

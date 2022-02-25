@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ro R Models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Add</th>
+      <th>Dob</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ro_r_models.each do |ro_r_model| %>
+      <tr>
+        <td><%= ro_r_model.game %></td>
+        <td><%= ro_r_model.name %></td>
+        <td><%= ro_r_model.score %></td>
+        <td><%= ro_r_model.add %></td>
+        <td><%= ro_r_model.dob %></td>
+        <td><%= link_to 'Show', ro_r_model %></td>
+        <td><%= link_to 'Edit', edit_ro_r_model_path(ro_r_model) %></td>
+        <td><%= link_to 'Destroy', ro_r_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ro R Model', new_ro_r_model_path %>

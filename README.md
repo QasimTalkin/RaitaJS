@@ -1,12 +1,53 @@
+[SASS - Raita](#sass---raita)
+  - [What is SASS?](#what-is-sass)
+  - [create and compile to CSS](#create-and-compile-to-css)
+  - [Varibles](#varibles)
+  - [Partials](#partials)
+  - [Nesting Rule](#nesting-rule)
+  - [Math in Scss](#math-in-scss)
+  - [maps in scss](#maps-in-scss)
+  - [Loops](#loops)
+  - [Conditional](#conditional)
+  - [parent selectors](#parent-selectors)
+  - [Mixins (group together bunch of css properties and values )](#mixins-group-together-bunch-of-css-properties-and-values-)
+  - [Functions in SASS](#functions-in-sass)
+- [SASS - Raita](#sass---raita)
+  - [What is SASS?](#what-is-sass)
+  - [create and compile to CSS](#create-and-compile-to-css)
+  - [Varibles](#varibles)
+  - [Partials](#partials)
+  - [Nesting Rule](#nesting-rule)
+  - [Math in Scss](#math-in-scss)
+  - [maps in scss](#maps-in-scss)
+  - [Loops](#loops)
+  - [Conditional](#conditional)
+  - [parent selectors](#parent-selectors)
+  - [Mixins (group together bunch of css properties and values )](#mixins-group-together-bunch-of-css-properties-and-values-)
+  - [Functions in SASS](#functions-in-sass)
+- [NODE - Raita](#node---raita)
+  - [1)](#1)
+  - [2)](#2)
+  - [3)](#3)
+  - [4](#4)
+  - [5)](#5)
+  - [6-trems](#6-trems)
+  - [creat server](#creat-server)
+  - [html page to browsers](#html-page-to-browsers)
+  - [NPM](#npm)
+  - [MOGO DB](#mogo-db)
+    - [mongoes](#mongoes)
+  - [Tidy Routes](#tidy-routes)
+  - [Tesign in jest](#tesign-in-jest)
+- [Ruby on Rails Model Database Active Directory](#ruby-on-rails-model-database-active-directory)
 # SASS - Raita
 
 Build our own CSS library
 ## What is SASS?
 
-- flexible CSS built in ruby
+
 - functions loop variables and inheritance
 - used to build cs
-
+- flexible CSS built in ruby- 
 ## create and compile to CSS
 
 - start up 
@@ -368,3 +409,7 @@ delete -color.findanddeletebyid
 - Controller 
 
 ## Tesign in jest 
+
+
+# Ruby on Rails Model Database Active Directory
+
