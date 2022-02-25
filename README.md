@@ -413,3 +413,39 @@ delete -color.findanddeletebyid
 
 # Ruby on Rails Model Database Active Directory
 
+```ruby
+rails g scaffold RoRModel game:string name:string score:string add:string dob:date
+      invoke  active_record
+      create    db/migrate/20220225214718_create_ro_r_models.rb
+      create    app/models/ro_r_model.rb
+      invoke    test_unit
+      create      test/models/ro_r_model_test.rb
+      create      test/fixtures/ro_r_models.yml
+      invoke  resource_route
+       route    resources :ro_r_models
+      invoke  scaffold_controller
+      create    app/controllers/ro_r_models_controller.rb
+      invoke    erb
+      create      app/views/ro_r_models
+      create      app/views/ro_r_models/index.html.erb
+      create      app/views/ro_r_models/edit.html.erb
+      create      app/views/ro_r_models/show.html.erb
+      create      app/views/ro_r_models/new.html.erb
+      create      app/views/ro_r_models/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/ro_r_models_controller_test.rb
+      create      test/system/ro_r_models_test.rb
+      invoke    helper
+      create      app/helpers/ro_r_models_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/ro_r_models/index.json.jbuilder
+      create      app/views/ro_r_models/show.json.jbuilder
+      create      app/views/ro_r_models/_ro_r_model.json.jbuilder
+      invoke  assets
+      invoke    scss
+      create      app/assets/stylesheets/ro_r_models.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.scss
+
+```
