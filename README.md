@@ -449,3 +449,4 @@ rails g scaffold RoRModel game:string name:string score:string add:string dob:da
       create    app/assets/stylesheets/scaffolds.scss
 
 ```
+
