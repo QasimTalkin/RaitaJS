@@ -39,6 +39,16 @@
   - [Tidy Routes](#tidy-routes)
   - [Tesign in jest](#tesign-in-jest)
 - [Ruby on Rails Model Database Active Directory](#ruby-on-rails-model-database-active-directory)
+  - [attr_acessor combinie attr_reader, attr_write](#attr_acessor-combinie-attr_reader-attr_write)
+  - [Fat Model Skkinny controller](#fat-model-skkinny-controller)
+  - [Where chain is](#where-chain-is)
+    - [limit -> limit(4)](#limit---limit4)
+    - [offset -> skips .offset(2)](#offset---skips-offset2)
+  - [Count](#count)
+  - [select attricbutes](#select-attricbutes)
+  - [pluck attricbutes](#pluck-attricbutes)
+  - [ids attricbutes](#ids-attricbutes)
+  - [Validations](#validations)
 # SASS - Raita
 
 Build our own CSS library
@@ -450,3 +460,44 @@ rails g scaffold RoRModel game:string name:string score:string add:string dob:da
 
 ```
 
+## attr_acessor combinie attr_reader, attr_write
+- read and write values
+- active record does this for us for us  to acess the values
+
+## Fat Model Skkinny controller
+ - DRY
+ - methods defined in one place 
+
+## Where chain is 
+- pass condition using where 
+- user where.not
+  ### limit -> limit(4)
+  ### offset -> skips .offset(2)
+
+## Count 
+- return the count of records
+
+## select attricbutes
+```rb
+ User.select(:email).last
+  User Load (0.3ms)  SELECT "users"."email" FROM "users" ORDER BY "users"."id" DESC LIMIT ?  [["LIMIT", 1]]
+ => #<User id: nil, email: "red@red.com"> 
+```
+
+## pluck attricbutes 
+```rb
+User.pluck(:email)
+   (0.3ms)  SELECT "users"."email" FROM "users"
+ => ["red@red.com"] 
+```
+
+## ids attricbutes 
+```rb
+2.7.4 :048 > User.ids
+   (0.3ms)  SELECT "users"."id" FROM "users"
+ => [1, 2, 3, 4] 
+2.7.4 :049 > 
+```
+
+## Validations 
+validates_email, validates_format_of
