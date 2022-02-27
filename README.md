@@ -48,7 +48,26 @@
   - [select attricbutes](#select-attricbutes)
   - [pluck attricbutes](#pluck-attricbutes)
   - [ids attricbutes](#ids-attricbutes)
-  - [Validations](#validations)
+  - [Validations samrter model](#validations-samrter-model)
+  - [validates_presence_of :name](#validates_presence_of-name)
+  - [validates_length_of :name, :minimum =>1](#validates_length_of-name-minimum-1)
+  - [better way to vlaidate](#better-way-to-vlaidate)
+  - [other vliadations](#other-vliadations)
+  - [custome validation](#custome-validation)
+  - [Skip validations](#skip-validations)
+  - [Callbacks in Active record](#callbacks-in-active-record)
+  - [conditonal call back](#conditonal-call-back)
+  - [Skip callback](#skip-callback)
+  - [Association](#association)
+    - [1:1 has_one, blongs_to](#11-has_one-blongs_to)
+    - [1:M many has_many, belongs_to](#1m-many-has_many-belongs_to)
+    - [M:N many to many has_and_belongs_to_many](#mn-many-to-many-has_and_belongs_to_many)
+  - [blongs_to presence validation](#blongs_to-presence-validation)
+  - [desstroy depenede realted records](#desstroy-depenede-realted-records)
+  - [Has ans mnay relations (join tbale)](#has-ans-mnay-relations-join-tbale)
+  - [Rich joins](#rich-joins)
+  - [Traverse Rich Joins](#traverse-rich-joins)
+  - [join table query](#join-table-query)
 # SASS - Raita
 
 Build our own CSS library
@@ -498,6 +517,121 @@ User.pluck(:email)
  => [1, 2, 3, 4] 
 2.7.4 :049 > 
 ```
+ 
+## Validations samrter model
+- validates_email, validates_format_of
 
-## Validations 
-validates_email, validates_format_of
+## validates_presence_of :name 
+
+* cant create or update a record unless there is a name present 
+
+## validates_length_of :name, :minimum =>1
+* cant create or update a record unless there is a name present 
+
+## better way to vlaidate 
+
+```ruby
+validates :email, :presence => true,
+                  :lenght => (minimum:4)
+
+```
+- can see errors by typing Recod.errors 
+## other vliadations 
+validates_numericality_of 
+validates_inclusion
+validates_uniqueness
+validates_confirmation_of 
+validates_associated
+* :allow_nil :allow_blank
+* :on (:save, :create, :update)
+* :if, :unless,
+  
+## custome validation 
+
+```rb
+  def edits_are_allowed_today
+    if Time.now.wday == 6  #{time now week day}
+      errors.add(:base, 'yo i added this error')
+    end
+  end
+```
+## Skip validations 
+
+- `save(validate: false)`
+- `update_all`
+  
+## Callbacks in Active record 
+- intervine in object life cycle
+- run code customization befre` and after key internal process
+- run code before and after CRUD
+- ![Active recode callback](2022-02-27-08-35-45.png)
+  - before_validate
+  - after_validate
+  - before_save
+  - before_create
+  - after_create
+  - after_save
+  - after_commit
+
+- peform clean up
+- send email notification
+- make api calls
+## conditonal call back 
+- :if 
+- :unless
+  
+## Skip callback
+- update_column
+- delete (not destroy.)
+
+## Association
+### 1:1 has_one, blongs_to
+- Class has one teacher 
+- Teacher belongs to class 
+- Foreign key on teacher (class room id)
+
+### 1:M many has_many, belongs_to
+- 1 teacher many course 
+- course belongs to teacher 
+- f key on cours
+
+### M:N many to many has_and_belongs_to_many
+- many Students many courses 
+- Join table (links two diff table)
+- join table give you all students having that course and course have all students
+
+## blongs_to presence validation
+- must establishe relaitonship on belongs_to
+- Adds validation for object to present
+
+## desstroy depenede realted records
+- user has many comments 
+- on delete user all commets get delted 
+- orphan recodrds need to be delted 
+- create a callback or add assocaition to callback
+- `has_many :comments, :depenedent=> delete_all`
+
+## Has ans mnay relations (join tbale)
+- no model for join table 
+- join tbale just has forgirn keys
+- USer and department
+- naming join table for
+- fisrtTbalemnaem _ secondTable name for
+- alphabetical order 
+- Project-Collaborator: `collaborator_projects`
+- BlogPost-Category: `blog_post_categories`
+- Department-User: `department_users`
+
+## Rich joins
+
+- add more info to join table 
+- rich join created join styled table 
+- has primary key 
+## Traverse Rich Joins 
+
+- cant get page.users
+- `has_many :through`
+
+## join table query 
+- `instance.joins.where(conditions )`
+- ![rich joins](2022-02-27-12-33-38.png)

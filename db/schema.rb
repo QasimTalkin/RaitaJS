@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_25_230222) do
+ActiveRecord::Schema.define(version: 2022_02_27_172146) do
 
   create_table "adobes", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,32 @@ ActiveRecord::Schema.define(version: 2022_02_25_230222) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "departments", force: :cascade do |t|
+    t.string "name"
+    t.bigint "deptNum"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "departments_users", id: false, force: :cascade do |t|
+    t.integer "department_id", null: false
+    t.integer "user_id", null: false
+    t.index ["department_id", "user_id"], name: "index_departments_users_on_department_id_and_user_id"
+    t.index ["user_id", "department_id"], name: "index_departments_users_on_user_id_and_department_id"
+  end
+
+  create_table "page_links", force: :cascade do |t|
+    t.integer "page_id", null: false
+    t.integer "user_id", null: false
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["page_id", "user_id"], name: "index_page_links_on_page_id_and_user_id"
+    t.index ["page_id"], name: "index_page_links_on_page_id"
+    t.index ["user_id", "page_id"], name: "index_page_links_on_user_id_and_page_id"
+    t.index ["user_id"], name: "index_page_links_on_user_id"
+  end
+
   create_table "pages", force: :cascade do |t|
     t.bigint "subject_i"
     t.string "name"
@@ -38,6 +64,8 @@ ActiveRecord::Schema.define(version: 2022_02_25_230222) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "subject_id"
+    t.index ["subject_id"], name: "index_pages_on_subject_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -76,5 +104,7 @@ ActiveRecord::Schema.define(version: 2022_02_25_230222) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "page_links", "pages"
+  add_foreign_key "page_links", "users"
   add_foreign_key "reviews", "airlines"
 end
