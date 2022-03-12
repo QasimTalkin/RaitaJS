@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_27_172146) do
+ActiveRecord::Schema.define(version: 2022_03_12_214749) do
 
   create_table "adobes", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2022_02_27_172146) do
     t.string "name"
     t.string "image_url"
     t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "comment"
+    t.string "title"
+    t.string "subject"
+    t.string "reviews"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

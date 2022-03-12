@@ -2,7 +2,7 @@ import React from "react"
 import {Route, Switch } from "react-router-dom";
 const Airline = (props) => {
     return (
-<div>yooo airline 1</div>
+<div>Single Airline</div>
     )
 }
 

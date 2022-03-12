@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   post 'adobe/status', to: 'adobe#status'
 
   ## react paroject 1 routes
-
   namespace :api do
     namespace :v1 do
       resources :airlines, param: :slug
       resources :reviews
+      resources :blogs
     end
   end
   # all non declred routed are directed here

@@ -1,16 +1,3 @@
-[SASS - Raita](#sass---raita)
-  - [What is SASS?](#what-is-sass)
-  - [create and compile to CSS](#create-and-compile-to-css)
-  - [Varibles](#varibles)
-  - [Partials](#partials)
-  - [Nesting Rule](#nesting-rule)
-  - [Math in Scss](#math-in-scss)
-  - [maps in scss](#maps-in-scss)
-  - [Loops](#loops)
-  - [Conditional](#conditional)
-  - [parent selectors](#parent-selectors)
-  - [Mixins (group together bunch of css properties and values )](#mixins-group-together-bunch-of-css-properties-and-values-)
-  - [Functions in SASS](#functions-in-sass)
 - [SASS - Raita](#sass---raita)
   - [What is SASS?](#what-is-sass)
   - [create and compile to CSS](#create-and-compile-to-css)
@@ -68,6 +55,8 @@
   - [Rich joins](#rich-joins)
   - [Traverse Rich Joins](#traverse-rich-joins)
   - [join table query](#join-table-query)
+- [React - Raita](#react---raita)
+  - [React Compoent](#react-compoent)
 # SASS - Raita
 
 Build our own CSS library
@@ -635,3 +624,12 @@ validates_associated
 ## join table query 
 - `instance.joins.where(conditions )`
 - ![rich joins](2022-02-27-12-33-38.png)
+
+# React - Raita
+
+## React Compoent
+
+* navar, block,footer..sidebar are all comopnent that we will create in JSX
+* class is reserved keywword we use className in jsx 
+* oput stuff use dynmic varibales in {}
+  
