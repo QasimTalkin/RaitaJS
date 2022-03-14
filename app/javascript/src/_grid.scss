@@ -31,6 +31,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 @each $val in $layout-values {
     .justify-#{$val}{
+        align-items: center;
         justify-content: $val;
     }
 }

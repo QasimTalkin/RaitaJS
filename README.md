@@ -57,6 +57,10 @@
   - [join table query](#join-table-query)
 - [React - Raita](#react---raita)
   - [React Compoent](#react-compoent)
+  - [Styling inline](#styling-inline)
+  - [Click event](#click-event)
+    - [anonymous function](#anonymous-function)
+  - [State](#state)
 # SASS - Raita
 
 Build our own CSS library
@@ -632,4 +636,21 @@ validates_associated
 * navar, block,footer..sidebar are all comopnent that we will create in JSX
 * class is reserved keywword we use className in jsx 
 * oput stuff use dynmic varibales in {}
+
+## Styling inline 
+* `style={{}}` -> dynamic value with object in it
+* js properties key are camle cased in key value pair styles
+
+## Click event
+* event object passed bt default
+### anonymous function
+*  invoke on click fucntion by using arrow key 
+*  `onClick = {()->handle(value)}`
+*  will have to pass arg in even 
   
+## State
+* cahnge data over time
+* whtch out for value chage in react
+* make the value reactive
+* useState hook
+* `import {useState} from 'react'`

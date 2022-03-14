@@ -7,16 +7,20 @@
     background-color: palegoldenrod;
     box-shadow: $base-box-shadow;
     border-radius: math.div($base-border-radius, 4);
-
+    align-items: center;
+    text-align: center;
+    min-height: 25px;
 
     .card-title {
         font-size: $base-font-size-xl;
         padding-bottom: $base-padding;
         font-weight: bold;
+        
     }
 
     .card-body {
         font-size: $base-font-size;
+        padding: $base-padding;
 
         a { 
             font-size: $base-font-size-m;

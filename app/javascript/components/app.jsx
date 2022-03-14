@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Airlines from "./Airlines/Airlines";
 import Airline from "./Airline/Airline";
 import Blogs from "./Blogs/Blogs"
+
 const App = () => {
     return (
         <Router>

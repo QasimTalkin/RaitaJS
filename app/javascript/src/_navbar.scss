@@ -11,7 +11,8 @@
     @extend %flex-layout;
     padding: $base-padding $base-padding*2;
     box-shadow: $base-box-shadow;
-
+    border-bottom:1px solid $secondary;
+    background-color: orange;
     .site-title {
         font-size: $base-font-size-l;
     }
@@ -23,7 +24,6 @@
 @each $key, $val in $colors {
     .nav-#{$key}{
         @extend .navbar;
-        background-color: $val;
     }
 }
 
