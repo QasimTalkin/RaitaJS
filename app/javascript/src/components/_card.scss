@@ -4,8 +4,7 @@
     display: block;
     padding: $base-padding;
     border: $base-border-thickness solid #ddd;
-    background-color: palegoldenrod;
-    box-shadow: $base-box-shadow;
+    background:beige;
     border-radius: math.div($base-border-radius, 4);
     align-items: center;
     text-align: center;
@@ -13,6 +12,7 @@
 
     .card-title {
         font-size: $base-font-size-xl;
+        color:hotpink;
         padding-bottom: $base-padding;
         font-weight: bold;
         
@@ -30,5 +30,10 @@
 }
 
 
+.card:hover{
+  
 
+  box-shadow: $base-box-shadow;
+
+}
 

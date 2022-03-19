@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-
+import Rating from '@mui/material/Rating';
 
 
 const Blogs = (props) => {
@@ -23,6 +23,8 @@ const Blogs = (props) => {
     });
 
   }
+  
+  
   
 
 
@@ -49,9 +51,16 @@ const Blogs = (props) => {
     </div>
     <div className="row gap-2 justify-center">
         {reviews.map( (review, key )=> (
-          <div key={key} className="col-3-sm">
+          <div key={key} className="col-6-sm">
             <div className="card" style={{minHeight:'100px'}}>
-              <h2 className="title">{review.title}</h2>
+              <h2 className="card-title">{review.title}</h2>
+              <Rating
+                name="simple-controlled"
+                defaultValue={review.score}
+                onChange={(event, newValue) => {
+                  console.log(newValue)
+                }}
+              />
               <p className="card-body">{review.description}</p>
             </div>
           </div>
