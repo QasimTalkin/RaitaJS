@@ -61,6 +61,8 @@
   - [Click event](#click-event)
     - [anonymous function](#anonymous-function)
   - [State](#state)
+  - [reusable componet](#reusable-componet)
+  - [passing function as props](#passing-function-as-props)
 # SASS - Raita
 
 Build our own CSS library
@@ -654,3 +656,11 @@ validates_associated
 * make the value reactive
 * useState hook
 * `import {useState} from 'react'`
+
+## reusable componet
+* careate sample temaplte to use 
+* add react props to it 
+* destrucre pros ({revieww, titoel})
+
+## passing function as props 
+* handleClick uodate use state 
